@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Tue Nov 15 08:05:59 2016
+# Process ID: 14396
+# Current directory: D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4392 D:\PA_Workspace\FPGA_project\common_project\vivado_examples\aes128_verilog\aes128_verilog.xpr
+# Log file: D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog/vivado.log
+# Journal file: D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog/aes128_verilog.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_35t
+wait_on_run synth_35t
+launch_runs impl_35t
+wait_on_run impl_35t
+launch_runs impl_35t -to_step write_bitstream
+wait_on_run impl_35t

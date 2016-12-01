@@ -1,0 +1,1541 @@
+
+*** Running vivado
+    with args -log cw305_top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source cw305_top.tcl
+
+WARNING: Default location for XILINX_VIVADO_HLS not found: 
+
+****** Vivado v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source cw305_top.tcl -notrace
+Command: synth_design -top cw305_top -part xc7a35tftg256-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14868 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 287.137 ; gain = 80.383
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'cw305_top' [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:34]
+INFO: [Synth 8-638] synthesizing module 'usb_module' [D:/PA_Workspace/FPGA_project/common_project/common/usb_module.v:33]
+	Parameter MEMORY_WIDTH bound to: 10 - type: integer 
+	Parameter MEMORY_BYTES bound to: 1024 - type: integer 
+	Parameter MEMORY_MASK bound to: 1023 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'IBUFG' [D:/Xilinx/Vivado/2016.1/scripts/rt/data/unisim_comp.v:14569]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUFG' (1#1) [D:/Xilinx/Vivado/2016.1/scripts/rt/data/unisim_comp.v:14569]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Xilinx/Vivado/2016.1/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (2#1) [D:/Xilinx/Vivado/2016.1/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'usb_module' (3#1) [D:/PA_Workspace/FPGA_project/common_project/common/usb_module.v:33]
+INFO: [Synth 8-638] synthesizing module 'registers' [D:/PA_Workspace/FPGA_project/common_project/common/registers/registers.v:94]
+	Parameter MEMORY_WIDTH bound to: 10 - type: integer 
+	Parameter MEMORY_BYTES bound to: 1024 - type: integer 
+	Parameter KEY_WIDTH bound to: 128 - type: integer 
+	Parameter PT_WIDTH bound to: 128 - type: integer 
+	Parameter CT_WIDTH bound to: 128 - type: integer 
+	Parameter done_edge_sensitive bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'BUFGCTRL' [D:/Xilinx/Vivado/2016.1/scripts/rt/data/unisim_comp.v:661]
+	Parameter INIT_OUT bound to: 0 - type: integer 
+	Parameter IS_CE0_INVERTED bound to: 1'b0 
+	Parameter IS_CE1_INVERTED bound to: 1'b0 
+	Parameter IS_I0_INVERTED bound to: 1'b0 
+	Parameter IS_I1_INVERTED bound to: 1'b0 
+	Parameter IS_IGNORE0_INVERTED bound to: 1'b0 
+	Parameter IS_IGNORE1_INVERTED bound to: 1'b0 
+	Parameter IS_S0_INVERTED bound to: 1'b0 
+	Parameter IS_S1_INVERTED bound to: 1'b0 
+	Parameter PRESELECT_I0 bound to: FALSE - type: string 
+	Parameter PRESELECT_I1 bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'BUFGCTRL' (4#1) [D:/Xilinx/Vivado/2016.1/scripts/rt/data/unisim_comp.v:661]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [D:/Xilinx/Vivado/2016.1/scripts/rt/data/unisim_comp.v:25287]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (5#1) [D:/Xilinx/Vivado/2016.1/scripts/rt/data/unisim_comp.v:25287]
+WARNING: [Synth 8-3848] Net init in module/entity registers does not have driver. [D:/PA_Workspace/FPGA_project/common_project/common/registers/registers.v:128]
+INFO: [Synth 8-256] done synthesizing module 'registers' (6#1) [D:/PA_Workspace/FPGA_project/common_project/common/registers/registers.v:94]
+WARNING: [Synth 8-350] instance 'reg_inst' of module 'registers' requires 22 connections, but only 20 given [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+INFO: [Synth 8-638] synthesizing module 'aes_core' [D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_core.v:36]
+	Parameter AES_128 bound to: 0 - type: integer 
+	Parameter AES_192 bound to: 1 - type: integer 
+	Parameter AES_256 bound to: 2 - type: integer 
+	Parameter AES_KEYSCHED bound to: 0 - type: integer 
+	Parameter AES_DECRYPT bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'aes_ks' [D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_ks.v:36]
+	Parameter AES_128 bound to: 0 - type: integer 
+	Parameter AES_192 bound to: 1 - type: integer 
+	Parameter AES_256 bound to: 2 - type: integer 
+	Parameter KEYSCHED_TYPE_1 bound to: 0 - type: integer 
+	Parameter KEYSCHED_TYPE_2 bound to: 1 - type: integer 
+	Parameter KEYSCHED_TYPE_3 bound to: 2 - type: integer 
+	Parameter KEYSCHED_TYPE_A bound to: 3 - type: integer 
+	Parameter KEYSCHED_TYPE_B bound to: 4 - type: integer 
+	Parameter KEYSCHED_TYPE_C bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'aes_sbox' [D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_sbox.v:36]
+INFO: [Synth 8-256] done synthesizing module 'aes_sbox' (7#1) [D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_sbox.v:36]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_ks.v:107]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_ks.v:117]
+INFO: [Synth 8-256] done synthesizing module 'aes_ks' (8#1) [D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_ks.v:36]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_core.v:272]
+INFO: [Synth 8-256] done synthesizing module 'aes_core' (9#1) [D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_core.v:36]
+INFO: [Synth 8-638] synthesizing module 'Ring_osc_3' [C:/Users/Bob/Desktop/Random.vhdl:17]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Bob/Desktop/Random.vhdl:21]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Bob/Desktop/Random.vhdl:22]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Bob/Desktop/Random.vhdl:23]
+	Parameter INIT bound to: 4'b0001 
+INFO: [Synth 8-113] binding component instance 'inv_lut1' to cell 'LUT1' [C:/Users/Bob/Desktop/Random.vhdl:49]
+	Parameter INIT bound to: 4'b0001 
+INFO: [Synth 8-113] binding component instance 'inv_lut2' to cell 'LUT1' [C:/Users/Bob/Desktop/Random.vhdl:56]
+	Parameter INIT bound to: 4'b0001 
+INFO: [Synth 8-113] binding component instance 'inv_lut3' to cell 'LUT1' [C:/Users/Bob/Desktop/Random.vhdl:63]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'D_ff' to cell 'FD' [C:/Users/Bob/Desktop/Random.vhdl:70]
+INFO: [Synth 8-256] done synthesizing module 'Ring_osc_3' (10#1) [C:/Users/Bob/Desktop/Random.vhdl:17]
+INFO: [Synth 8-256] done synthesizing module 'cw305_top' (11#1) [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:34]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8191]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8190]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8189]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8188]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8187]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8186]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8185]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8184]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8183]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8182]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8181]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8180]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8179]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8178]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8177]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8176]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8175]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8174]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8173]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8172]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8171]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8170]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8169]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8168]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8167]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8166]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8165]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8164]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8163]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8162]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8161]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8160]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8159]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8158]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8157]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8156]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8155]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8154]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8153]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8152]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8151]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8150]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8149]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8148]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8147]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8146]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8145]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8144]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8143]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8142]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8141]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8140]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8139]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8138]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8137]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8136]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8135]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8134]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8133]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8132]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8131]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8130]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8129]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8128]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8127]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8126]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8125]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8124]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8123]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8122]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8121]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8120]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8119]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8118]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8117]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8116]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8115]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8114]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8113]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8112]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8111]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8110]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8109]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8108]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8107]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8106]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8105]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8104]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8103]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8102]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8101]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8100]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8099]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8098]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8097]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8096]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8095]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8094]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8093]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8092]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 340.520 ; gain = 133.766
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[127] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[126] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[125] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[124] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[123] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[122] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[121] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[120] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[119] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[118] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[117] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[116] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[115] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[114] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[113] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[112] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[111] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[110] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[109] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[108] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[107] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[106] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[105] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[104] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[103] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[102] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[101] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[100] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[99] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[98] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[97] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[96] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[95] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[94] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[93] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[92] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[91] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[90] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[89] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[88] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[87] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[86] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[85] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[84] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[83] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[82] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[81] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[80] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[79] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[78] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[77] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[76] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[75] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[74] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[73] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[72] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[71] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[70] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[69] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[68] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[67] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[66] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[65] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[64] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[63] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[62] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[61] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[60] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[59] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[58] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[57] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[56] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[55] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[54] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[53] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[52] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[51] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[50] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[49] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[48] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[47] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[46] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[45] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[44] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[43] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[42] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[41] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[40] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[39] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[38] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[37] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[36] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[35] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[34] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[33] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[32] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[31] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[30] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[29] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[28] to constant 0 [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:126]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 340.520 ; gain = 133.766
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tftg256-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/PA_Workspace/FPGA_project/common_project/common/cw305_main.xdc]
+Finished Parsing XDC File [D:/PA_Workspace/FPGA_project/common_project/common/cw305_main.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/PA_Workspace/FPGA_project/common_project/common/cw305_main.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cw305_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cw305_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 9 instances were transformed.
+  FD => FDRE: 8 instances
+  IBUFG => IBUF: 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 691.402 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 691.402 ; gain = 484.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tftg256-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 691.402 ; gain = 484.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 691.402 ; gain = 484.648
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "fsm0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "busy_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 691.402 ; gain = 484.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |usb_module__GCB0 |           1|     32640|
+|2     |usb_module__GCB1 |           1|      8160|
+|3     |usb_module__GCB2 |           1|     10200|
+|4     |usb_module__GCB3 |           1|     14280|
+|5     |usb_module__GCB4 |           1|     32869|
+|6     |usb_module__GCB5 |           1|     32880|
+|7     |usb_module__GCB6 |           1|     29088|
+|8     |usb_module__GCB7 |           1|     28560|
+|9     |usb_module__GCB8 |           1|      8160|
+|10    |cw305_top__GC0   |           1|     13004|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register memory_input_reg [D:/PA_Workspace/FPGA_project/common_project/common/usb_module.v:80]
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---XORs : 
+	   2 Input    128 Bit         XORs := 2     
+	   2 Input     32 Bit         XORs := 6     
+	   2 Input      8 Bit         XORs := 94    
+	   8 Input      8 Bit         XORs := 16    
+	   4 Input      8 Bit         XORs := 16    
+	   2 Input      1 Bit         XORs := 1680  
+	   3 Input      1 Bit         XORs := 180   
+	   4 Input      1 Bit         XORs := 220   
+	   5 Input      1 Bit         XORs := 60    
+	   6 Input      1 Bit         XORs := 20    
++---Registers : 
+	             8192 Bit    Registers := 1     
+	              256 Bit    Registers := 1     
+	              128 Bit    Registers := 6     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---RAMs : 
+	               1K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input   8192 Bit        Muxes := 1     
+	   9 Input    256 Bit        Muxes := 1     
+	   7 Input    256 Bit        Muxes := 1     
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 11    
+	   2 Input     32 Bit        Muxes := 5     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   5 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 973   
+	   5 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register memory_input_reg [D:/PA_Workspace/FPGA_project/common_project/common/usb_module.v:80]
+Hierarchical RTL Component report 
+Module usb_module 
+Detailed RTL Component Info : 
++---Registers : 
+	             8192 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   8192 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module registers 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+Module aes_sbox__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__3 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__4 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_ks 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 6     
+	   2 Input      8 Bit         XORs := 2     
++---Registers : 
+	              256 Bit    Registers := 1     
+	              128 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   9 Input    256 Bit        Muxes := 1     
+	   7 Input    256 Bit        Muxes := 1     
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 5     
+	   5 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module aes_sbox__5 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__6 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__7 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__8 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__9 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__10 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__11 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__12 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__13 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__14 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__15 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__16 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__17 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__18 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox__19 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_sbox 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
+	   3 Input      1 Bit         XORs := 9     
+	   4 Input      1 Bit         XORs := 11    
+	   5 Input      1 Bit         XORs := 3     
+	   6 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 48    
+Module aes_core 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---XORs : 
+	   2 Input    128 Bit         XORs := 2     
+	   2 Input      8 Bit         XORs := 92    
+	   8 Input      8 Bit         XORs := 16    
+	   4 Input      8 Bit         XORs := 16    
++---Registers : 
+	              128 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	               1K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 9     
+	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 12    
+	   4 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[25] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[24] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[23] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[22] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[21] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[20] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[19] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[18] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[17] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[16] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[15] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[14] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[13] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[2] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[1] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[0] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[39] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[38] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[37] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[36] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[35] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[34] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[33] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[32] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[31] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[30] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[29] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[28] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[27] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[26] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[25] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[24] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[23] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[22] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[21] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[20] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[19] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[18] driven by constant 1
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[17] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[16] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[15] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[14] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[13] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[12] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[11] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[10] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[9] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[8] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[7] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[6] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[5] driven by constant 1
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[4] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[3] driven by constant 1
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[2] driven by constant 1
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[1] driven by constant 1
+WARNING: [Synth 8-3917] design cw305_top__GC0 has port mem_output[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:03:39 ; elapsed = 00:03:58 . Memory (MB): peak = 691.402 ; gain = 484.648
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:03:39 ; elapsed = 00:03:58 . Memory (MB): peak = 691.402 ; gain = 484.648
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |usb_module__GCB0 |           1|     32896|
+|2     |usb_module__GCB1 |           1|      8224|
+|3     |usb_module__GCB2 |           1|     10280|
+|4     |usb_module__GCB3 |           1|     14392|
+|5     |usb_module__GCB4 |           1|     32869|
+|6     |usb_module__GCB5 |           1|     40954|
+|7     |usb_module__GCB6 |           1|     29312|
+|8     |usb_module__GCB7 |           1|     28784|
+|9     |usb_module__GCB8 |           1|      8224|
+|10    |cw305_top__GC0   |           1|     16009|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+------------+-----------+----------------------+---------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives    | 
++------------+------------+-----------+----------------------+---------------+
+|aes_core    | ks_mem_reg | Implied   | 16 x 128             | RAM32M x 22   | 
++------------+------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'aes_core/ks_inst/size_r_reg[0]' (FDE) to 'aes_core/ks_inst/size_r_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/ks_inst/\size_r_reg[1] )
+INFO: [Synth 8-3886] merging instance 'aes_core/dec_r_reg' (FDE) to 'aes_core/round_max_reg[2]'
+INFO: [Synth 8-3886] merging instance 'aes_core/round_max_reg[3]' (FDE) to 'aes_core/round_max_reg[1]'
+INFO: [Synth 8-3886] merging instance 'aes_core/round_max_reg[0]' (FDE) to 'aes_core/round_max_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (aes_core/\round_max_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/\round_max_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/\fsm_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[59] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[60] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[88] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[80] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[64] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[72] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[89] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[81] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[73] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[90] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[82] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[66] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[74] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[69] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[91] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[85] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[83] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[67] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[70] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[87] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[92] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[93] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[86] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[84] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[94] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[68] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aes_core/i_1/\ks_reg[71] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (size_r_reg[1]) is unused and will be removed from module aes_ks.
+WARNING: [Synth 8-3332] Sequential element (size_r_reg[0]) is unused and will be removed from module aes_ks.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[127]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[126]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[125]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[124]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[123]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[122]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[121]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[120]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[119]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[118]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[117]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[116]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[115]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[114]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[113]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[112]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[111]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[110]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[109]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[108]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[107]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[106]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[105]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[104]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[103]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[102]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[101]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[100]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[99]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[98]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[97]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[96]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[95]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[94]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[93]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[92]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[91]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[90]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[89]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[88]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[87]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[86]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[85]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[84]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[83]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[82]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[81]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[80]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[79]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[78]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[77]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[76]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[75]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[74]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[73]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[72]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[71]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[70]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[69]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[68]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[67]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[66]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[65]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[64]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[63]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[62]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[61]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[60]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[59]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[58]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[57]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[56]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[55]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[54]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[53]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[52]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[51]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[50]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[49]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[48]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[47]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[46]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[45]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[44]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[43]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[42]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[41]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[40]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[39]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[38]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[37]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[36]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[35]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[34]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[33]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[32]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[31]) is unused and will be removed from module aes_core.
+WARNING: [Synth 8-3332] Sequential element (ks_reg[30]) is unused and will be removed from module aes_core.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:04:08 ; elapsed = 00:04:26 . Memory (MB): peak = 691.402 ; gain = 484.648
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:04:08 ; elapsed = 00:04:26 . Memory (MB): peak = 691.402 ; gain = 484.648
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |usb_module__GCB0 |           1|      5232|
+|2     |usb_module__GCB1 |           1|       322|
+|3     |usb_module__GCB2 |           1|      1635|
+|4     |usb_module__GCB3 |           1|      2289|
+|5     |usb_module__GCB4 |           1|     32869|
+|6     |usb_module__GCB5 |           1|      5123|
+|7     |usb_module__GCB6 |           1|      5106|
+|8     |usb_module__GCB7 |           1|      4578|
+|9     |usb_module__GCB8 |           1|      1784|
+|10    |cw305_top__GC0   |           1|      6387|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:22 ; elapsed = 00:04:40 . Memory (MB): peak = 754.008 ; gain = 547.254
+---------------------------------------------------------------------------------
+Found timing loop:
+     0: i_9/\u8/inv_lut2 /O (LUT1)
+     1: i_9/\u8/inv_lut2 /I0 (LUT1)
+      : i_9/\u8/delay2_inferred__0 /out
+      : i_9/\u8/delay2_inferred__0 /in0
+      : i_9/\u8/delay2_inferred /out
+      : i_9/\u8/delay2_inferred /in0
+     2: i_9/\u8/inv_lut1 /O (LUT1)
+     3: i_9/\u8/inv_lut1 /I0 (LUT1)
+      : i_9/\u8/delay1_inferred__0 /out
+      : i_9/\u8/delay1_inferred__0 /in0
+      : i_9/\u8/delay1_inferred /out
+      : i_9/\u8/delay1_inferred /in0
+     4: i_9/\u8/inv_lut3 /O (LUT1)
+     5: i_9/\u8/inv_lut3 /I0 (LUT1)
+      : i_9/\u8/delay3_inferred__0 /out
+      : i_9/\u8/delay3_inferred__0 /in0
+      : i_9/\u8/delay3_inferred /out
+      : i_9/\u8/delay3_inferred /in0
+     6: i_9/\u8/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:86]
+Found timing loop:
+     0: i_9/\u7/inv_lut2 /O (LUT1)
+     1: i_9/\u7/inv_lut2 /I0 (LUT1)
+      : i_9/\u7/delay2_inferred__0 /out
+      : i_9/\u7/delay2_inferred__0 /in0
+      : i_9/\u7/delay2_inferred /out
+      : i_9/\u7/delay2_inferred /in0
+     2: i_9/\u7/inv_lut1 /O (LUT1)
+     3: i_9/\u7/inv_lut1 /I0 (LUT1)
+      : i_9/\u7/delay1_inferred__0 /out
+      : i_9/\u7/delay1_inferred__0 /in0
+      : i_9/\u7/delay1_inferred /out
+      : i_9/\u7/delay1_inferred /in0
+     4: i_9/\u7/inv_lut3 /O (LUT1)
+     5: i_9/\u7/inv_lut3 /I0 (LUT1)
+      : i_9/\u7/delay3_inferred__0 /out
+      : i_9/\u7/delay3_inferred__0 /in0
+      : i_9/\u7/delay3_inferred /out
+      : i_9/\u7/delay3_inferred /in0
+     6: i_9/\u7/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:86]
+Found timing loop:
+     0: i_9/\u6/inv_lut2 /O (LUT1)
+     1: i_9/\u6/inv_lut2 /I0 (LUT1)
+      : i_9/\u6/delay2_inferred__0 /out
+      : i_9/\u6/delay2_inferred__0 /in0
+      : i_9/\u6/delay2_inferred /out
+      : i_9/\u6/delay2_inferred /in0
+     2: i_9/\u6/inv_lut1 /O (LUT1)
+     3: i_9/\u6/inv_lut1 /I0 (LUT1)
+      : i_9/\u6/delay1_inferred__0 /out
+      : i_9/\u6/delay1_inferred__0 /in0
+      : i_9/\u6/delay1_inferred /out
+      : i_9/\u6/delay1_inferred /in0
+     4: i_9/\u6/inv_lut3 /O (LUT1)
+     5: i_9/\u6/inv_lut3 /I0 (LUT1)
+      : i_9/\u6/delay3_inferred__0 /out
+      : i_9/\u6/delay3_inferred__0 /in0
+      : i_9/\u6/delay3_inferred /out
+      : i_9/\u6/delay3_inferred /in0
+     6: i_9/\u6/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:86]
+Found timing loop:
+     0: i_9/\u5/inv_lut2 /O (LUT1)
+     1: i_9/\u5/inv_lut2 /I0 (LUT1)
+      : i_9/\u5/delay2_inferred__0 /out
+      : i_9/\u5/delay2_inferred__0 /in0
+      : i_9/\u5/delay2_inferred /out
+      : i_9/\u5/delay2_inferred /in0
+     2: i_9/\u5/inv_lut1 /O (LUT1)
+     3: i_9/\u5/inv_lut1 /I0 (LUT1)
+      : i_9/\u5/delay1_inferred__0 /out
+      : i_9/\u5/delay1_inferred__0 /in0
+      : i_9/\u5/delay1_inferred /out
+      : i_9/\u5/delay1_inferred /in0
+     4: i_9/\u5/inv_lut3 /O (LUT1)
+     5: i_9/\u5/inv_lut3 /I0 (LUT1)
+      : i_9/\u5/delay3_inferred__0 /out
+      : i_9/\u5/delay3_inferred__0 /in0
+      : i_9/\u5/delay3_inferred /out
+      : i_9/\u5/delay3_inferred /in0
+     6: i_9/\u5/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:86]
+Found timing loop:
+     0: i_9/\u4/inv_lut2 /O (LUT1)
+     1: i_9/\u4/inv_lut2 /I0 (LUT1)
+      : i_9/\u4/delay2_inferred__0 /out
+      : i_9/\u4/delay2_inferred__0 /in0
+      : i_9/\u4/delay2_inferred /out
+      : i_9/\u4/delay2_inferred /in0
+     2: i_9/\u4/inv_lut1 /O (LUT1)
+     3: i_9/\u4/inv_lut1 /I0 (LUT1)
+      : i_9/\u4/delay1_inferred__0 /out
+      : i_9/\u4/delay1_inferred__0 /in0
+      : i_9/\u4/delay1_inferred /out
+      : i_9/\u4/delay1_inferred /in0
+     4: i_9/\u4/inv_lut3 /O (LUT1)
+     5: i_9/\u4/inv_lut3 /I0 (LUT1)
+      : i_9/\u4/delay3_inferred__0 /out
+      : i_9/\u4/delay3_inferred__0 /in0
+      : i_9/\u4/delay3_inferred /out
+      : i_9/\u4/delay3_inferred /in0
+     6: i_9/\u4/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:86]
+Found timing loop:
+     0: i_9/\u3/inv_lut2 /O (LUT1)
+     1: i_9/\u3/inv_lut2 /I0 (LUT1)
+      : i_9/\u3/delay2_inferred__0 /out
+      : i_9/\u3/delay2_inferred__0 /in0
+      : i_9/\u3/delay2_inferred /out
+      : i_9/\u3/delay2_inferred /in0
+     2: i_9/\u3/inv_lut1 /O (LUT1)
+     3: i_9/\u3/inv_lut1 /I0 (LUT1)
+      : i_9/\u3/delay1_inferred__0 /out
+      : i_9/\u3/delay1_inferred__0 /in0
+      : i_9/\u3/delay1_inferred /out
+      : i_9/\u3/delay1_inferred /in0
+     4: i_9/\u3/inv_lut3 /O (LUT1)
+     5: i_9/\u3/inv_lut3 /I0 (LUT1)
+      : i_9/\u3/delay3_inferred__0 /out
+      : i_9/\u3/delay3_inferred__0 /in0
+      : i_9/\u3/delay3_inferred /out
+      : i_9/\u3/delay3_inferred /in0
+     6: i_9/\u3/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:86]
+Found timing loop:
+     0: i_9/\u2/inv_lut2 /O (LUT1)
+     1: i_9/\u2/inv_lut2 /I0 (LUT1)
+      : i_9/\u2/delay2_inferred__0 /out
+      : i_9/\u2/delay2_inferred__0 /in0
+      : i_9/\u2/delay2_inferred /out
+      : i_9/\u2/delay2_inferred /in0
+     2: i_9/\u2/inv_lut1 /O (LUT1)
+     3: i_9/\u2/inv_lut1 /I0 (LUT1)
+      : i_9/\u2/delay1_inferred__0 /out
+      : i_9/\u2/delay1_inferred__0 /in0
+      : i_9/\u2/delay1_inferred /out
+      : i_9/\u2/delay1_inferred /in0
+     4: i_9/\u2/inv_lut3 /O (LUT1)
+     5: i_9/\u2/inv_lut3 /I0 (LUT1)
+      : i_9/\u2/delay3_inferred__0 /out
+      : i_9/\u2/delay3_inferred__0 /in0
+      : i_9/\u2/delay3_inferred /out
+      : i_9/\u2/delay3_inferred /in0
+     6: i_9/\u2/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:86]
+Found timing loop:
+     0: i_9/\u1/inv_lut2 /O (LUT1)
+     1: i_9/\u1/inv_lut2 /I0 (LUT1)
+      : i_9/\u1/delay2_inferred__0 /out
+      : i_9/\u1/delay2_inferred__0 /in0
+      : i_9/\u1/delay2_inferred /out
+      : i_9/\u1/delay2_inferred /in0
+     2: i_9/\u1/inv_lut1 /O (LUT1)
+     3: i_9/\u1/inv_lut1 /I0 (LUT1)
+      : i_9/\u1/delay1_inferred__0 /out
+      : i_9/\u1/delay1_inferred__0 /in0
+      : i_9/\u1/delay1_inferred /out
+      : i_9/\u1/delay1_inferred /in0
+     4: i_9/\u1/inv_lut3 /O (LUT1)
+     5: i_9/\u1/inv_lut3 /I0 (LUT1)
+      : i_9/\u1/delay3_inferred__0 /out
+      : i_9/\u1/delay3_inferred__0 /in0
+      : i_9/\u1/delay3_inferred /out
+      : i_9/\u1/delay3_inferred /in0
+     6: i_9/\u1/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:86]
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:04:29 ; elapsed = 00:04:48 . Memory (MB): peak = 800.563 ; gain = 593.809
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |usb_module__GCB0 |           1|       304|
+|2     |usb_module__GCB1 |           1|       249|
+|3     |usb_module__GCB4 |           1|      2478|
+|4     |usb_module__GCB5 |           1|       372|
+|5     |usb_module__GCB6 |           1|       128|
+|6     |cw305_top__GC0   |           1|      6387|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+Found timing loop:
+     0: \u8/inv_lut2 /O (LUT1)
+     1: \u8/inv_lut2 /I0 (LUT1)
+      : \u8/delay2_inferred__0 /out
+      : \u8/delay2_inferred__0 /in0
+      : \u8/delay2_inferred /out
+      : \u8/delay2_inferred /in0
+     2: \u8/inv_lut1 /O (LUT1)
+     3: \u8/inv_lut1 /I0 (LUT1)
+      : \u8/delay1_inferred__0 /out
+      : \u8/delay1_inferred__0 /in0
+      : \u8/delay1_inferred /out
+      : \u8/delay1_inferred /in0
+     4: \u8/inv_lut3 /O (LUT1)
+     5: \u8/inv_lut3 /I0 (LUT1)
+      : \u8/delay3_inferred__0 /out
+      : \u8/delay3_inferred__0 /in0
+      : \u8/delay3_inferred /out
+      : \u8/delay3_inferred /in0
+     6: \u8/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:34]
+Found timing loop:
+     0: \u7/inv_lut2 /O (LUT1)
+     1: \u7/inv_lut2 /I0 (LUT1)
+      : \u7/delay2_inferred__0 /out
+      : \u7/delay2_inferred__0 /in0
+      : \u7/delay2_inferred /out
+      : \u7/delay2_inferred /in0
+     2: \u7/inv_lut1 /O (LUT1)
+     3: \u7/inv_lut1 /I0 (LUT1)
+      : \u7/delay1_inferred__0 /out
+      : \u7/delay1_inferred__0 /in0
+      : \u7/delay1_inferred /out
+      : \u7/delay1_inferred /in0
+     4: \u7/inv_lut3 /O (LUT1)
+     5: \u7/inv_lut3 /I0 (LUT1)
+      : \u7/delay3_inferred__0 /out
+      : \u7/delay3_inferred__0 /in0
+      : \u7/delay3_inferred /out
+      : \u7/delay3_inferred /in0
+     6: \u7/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:34]
+Found timing loop:
+     0: \u6/inv_lut2 /O (LUT1)
+     1: \u6/inv_lut2 /I0 (LUT1)
+      : \u6/delay2_inferred__0 /out
+      : \u6/delay2_inferred__0 /in0
+      : \u6/delay2_inferred /out
+      : \u6/delay2_inferred /in0
+     2: \u6/inv_lut1 /O (LUT1)
+     3: \u6/inv_lut1 /I0 (LUT1)
+      : \u6/delay1_inferred__0 /out
+      : \u6/delay1_inferred__0 /in0
+      : \u6/delay1_inferred /out
+      : \u6/delay1_inferred /in0
+     4: \u6/inv_lut3 /O (LUT1)
+     5: \u6/inv_lut3 /I0 (LUT1)
+      : \u6/delay3_inferred__0 /out
+      : \u6/delay3_inferred__0 /in0
+      : \u6/delay3_inferred /out
+      : \u6/delay3_inferred /in0
+     6: \u6/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:34]
+Found timing loop:
+     0: \u5/inv_lut2 /O (LUT1)
+     1: \u5/inv_lut2 /I0 (LUT1)
+      : \u5/delay2_inferred__0 /out
+      : \u5/delay2_inferred__0 /in0
+      : \u5/delay2_inferred /out
+      : \u5/delay2_inferred /in0
+     2: \u5/inv_lut1 /O (LUT1)
+     3: \u5/inv_lut1 /I0 (LUT1)
+      : \u5/delay1_inferred__0 /out
+      : \u5/delay1_inferred__0 /in0
+      : \u5/delay1_inferred /out
+      : \u5/delay1_inferred /in0
+     4: \u5/inv_lut3 /O (LUT1)
+     5: \u5/inv_lut3 /I0 (LUT1)
+      : \u5/delay3_inferred__0 /out
+      : \u5/delay3_inferred__0 /in0
+      : \u5/delay3_inferred /out
+      : \u5/delay3_inferred /in0
+     6: \u5/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:34]
+Found timing loop:
+     0: \u4/inv_lut2 /O (LUT1)
+     1: \u4/inv_lut2 /I0 (LUT1)
+      : \u4/delay2_inferred__0 /out
+      : \u4/delay2_inferred__0 /in0
+      : \u4/delay2_inferred /out
+      : \u4/delay2_inferred /in0
+     2: \u4/inv_lut1 /O (LUT1)
+     3: \u4/inv_lut1 /I0 (LUT1)
+      : \u4/delay1_inferred__0 /out
+      : \u4/delay1_inferred__0 /in0
+      : \u4/delay1_inferred /out
+      : \u4/delay1_inferred /in0
+     4: \u4/inv_lut3 /O (LUT1)
+     5: \u4/inv_lut3 /I0 (LUT1)
+      : \u4/delay3_inferred__0 /out
+      : \u4/delay3_inferred__0 /in0
+      : \u4/delay3_inferred /out
+      : \u4/delay3_inferred /in0
+     6: \u4/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:34]
+Found timing loop:
+     0: \u3/inv_lut2 /O (LUT1)
+     1: \u3/inv_lut2 /I0 (LUT1)
+      : \u3/delay2_inferred__0 /out
+      : \u3/delay2_inferred__0 /in0
+      : \u3/delay2_inferred /out
+      : \u3/delay2_inferred /in0
+     2: \u3/inv_lut1 /O (LUT1)
+     3: \u3/inv_lut1 /I0 (LUT1)
+      : \u3/delay1_inferred__0 /out
+      : \u3/delay1_inferred__0 /in0
+      : \u3/delay1_inferred /out
+      : \u3/delay1_inferred /in0
+     4: \u3/inv_lut3 /O (LUT1)
+     5: \u3/inv_lut3 /I0 (LUT1)
+      : \u3/delay3_inferred__0 /out
+      : \u3/delay3_inferred__0 /in0
+      : \u3/delay3_inferred /out
+      : \u3/delay3_inferred /in0
+     6: \u3/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:34]
+Found timing loop:
+     0: \u2/inv_lut2 /O (LUT1)
+     1: \u2/inv_lut2 /I0 (LUT1)
+      : \u2/delay2_inferred__0 /out
+      : \u2/delay2_inferred__0 /in0
+      : \u2/delay2_inferred /out
+      : \u2/delay2_inferred /in0
+     2: \u2/inv_lut1 /O (LUT1)
+     3: \u2/inv_lut1 /I0 (LUT1)
+      : \u2/delay1_inferred__0 /out
+      : \u2/delay1_inferred__0 /in0
+      : \u2/delay1_inferred /out
+      : \u2/delay1_inferred /in0
+     4: \u2/inv_lut3 /O (LUT1)
+     5: \u2/inv_lut3 /I0 (LUT1)
+      : \u2/delay3_inferred__0 /out
+      : \u2/delay3_inferred__0 /in0
+      : \u2/delay3_inferred /out
+      : \u2/delay3_inferred /in0
+     6: \u2/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:34]
+Found timing loop:
+     0: \u1/inv_lut2 /O (LUT1)
+     1: \u1/inv_lut2 /I0 (LUT1)
+      : \u1/delay2_inferred__0 /out
+      : \u1/delay2_inferred__0 /in0
+      : \u1/delay2_inferred /out
+      : \u1/delay2_inferred /in0
+     2: \u1/inv_lut1 /O (LUT1)
+     3: \u1/inv_lut1 /I0 (LUT1)
+      : \u1/delay1_inferred__0 /out
+      : \u1/delay1_inferred__0 /in0
+      : \u1/delay1_inferred /out
+      : \u1/delay1_inferred /in0
+     4: \u1/inv_lut3 /O (LUT1)
+     5: \u1/inv_lut3 /I0 (LUT1)
+      : \u1/delay3_inferred__0 /out
+      : \u1/delay3_inferred__0 /in0
+      : \u1/delay3_inferred /out
+      : \u1/delay3_inferred /in0
+     6: \u1/inv_lut2 /O (LUT1)
+WARNING: [Synth 8-295] found timing loop. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:34]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:04:33 ; elapsed = 00:04:52 . Memory (MB): peak = 800.563 ; gain = 593.809
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:04:33 ; elapsed = 00:04:52 . Memory (MB): peak = 800.563 ; gain = 593.809
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:33 ; elapsed = 00:04:52 . Memory (MB): peak = 800.563 ; gain = 593.809
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:34 ; elapsed = 00:04:53 . Memory (MB): peak = 800.563 ; gain = 593.809
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:34 ; elapsed = 00:04:53 . Memory (MB): peak = 800.563 ; gain = 593.809
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:34 ; elapsed = 00:04:53 . Memory (MB): peak = 800.563 ; gain = 593.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:34 ; elapsed = 00:04:53 . Memory (MB): peak = 800.563 ; gain = 593.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:35 ; elapsed = 00:04:54 . Memory (MB): peak = 800.563 ; gain = 593.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:35 ; elapsed = 00:04:54 . Memory (MB): peak = 800.563 ; gain = 593.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     3|
+|2     |BUFGCTRL |     1|
+|3     |CARRY4   |    13|
+|4     |LUT1     |    77|
+|5     |LUT2     |   273|
+|6     |LUT3     |   111|
+|7     |LUT4     |   632|
+|8     |LUT5     |   291|
+|9     |LUT6     |  1789|
+|10    |MUXF7    |    32|
+|11    |MUXF8    |     5|
+|12    |ODDR     |     1|
+|13    |FD       |     8|
+|14    |FDRE     |   977|
+|15    |FDSE     |     2|
+|16    |IBUF     |    28|
+|17    |IBUFG    |     1|
+|18    |IOBUF    |     8|
+|19    |OBUF     |    13|
+|20    |OBUFT    |   120|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------+-------------+------+
+|      |Instance    |Module       |Cells |
++------+------------+-------------+------+
+|1     |top         |             |  4385|
+|2     |  aes_core  |aes_core     |  2919|
+|3     |    ks_inst |aes_ks       |  1067|
+|4     |  my_usb    |usb_module   |   898|
+|5     |  reg_inst  |registers    |   256|
+|6     |  u1        |Ring_osc_3   |     4|
+|7     |  u2        |Ring_osc_3_0 |     4|
+|8     |  u3        |Ring_osc_3_1 |     4|
+|9     |  u4        |Ring_osc_3_2 |     4|
+|10    |  u5        |Ring_osc_3_3 |     4|
+|11    |  u6        |Ring_osc_3_4 |     4|
+|12    |  u7        |Ring_osc_3_5 |     4|
+|13    |  u8        |Ring_osc_3_6 |     4|
++------+------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:35 ; elapsed = 00:04:54 . Memory (MB): peak = 800.563 ; gain = 593.809
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 555 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:14 ; elapsed = 00:04:37 . Memory (MB): peak = 800.563 ; gain = 240.957
+Synthesis Optimization Complete : Time (s): cpu = 00:04:35 ; elapsed = 00:04:54 . Memory (MB): peak = 800.563 ; gain = 593.809
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 8 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 17 instances were transformed.
+  FD => FDRE: 8 instances
+  IBUFG => IBUF: 1 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+162 Infos, 374 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:35 ; elapsed = 00:04:51 . Memory (MB): peak = 800.563 ; gain = 593.746
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 800.563 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 18 13:05:55 2016...

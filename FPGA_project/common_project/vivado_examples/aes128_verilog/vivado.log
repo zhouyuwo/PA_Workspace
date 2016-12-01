@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Tue Nov 15 08:05:59 2016
+# Process ID: 14396
+# Current directory: D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4392 D:\PA_Workspace\FPGA_project\common_project\vivado_examples\aes128_verilog\aes128_verilog.xpr
+# Log file: D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog/vivado.log
+# Journal file: D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog/aes128_verilog.xpr
+INFO: [Project 1-313] Project file moved from 'C:/chipwhisperer/hardware/victims/cw305_artixtarget/fpga/vivado_examples/aes128_verilog' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_35t' not found
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog/aes128_verilog.ip_user_files', nor could it be found using path 'C:/chipwhisperer/hardware/victims/cw305_artixtarget/fpga/vivado_examples/aes128_verilog/aes128_verilog.ip_user_files'.
+INFO: [Project 1-230] Project 'aes128_verilog.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2016.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 831.555 ; gain = 149.250
+update_compile_order -fileset sources_1
+launch_runs synth_35t
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_core.v" into library work [D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_core.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_ks.v" into library work [D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_ks.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_sbox.v" into library work [D:/PA_Workspace/FPGA_project/common_project/cryptosrc/aes_googlevault/aes_sbox.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/new/board.v" into library work [D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/new/board.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v" into library work [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:1]
+INFO: [HDL 9-1065] Parsing verilog file "D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog/aes128_verilog.srcs/sources_1/new/board.v" included at line 32. [D:/PA_Workspace/FPGA_project/common_project/common/cw305_top.v:32]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/PA_Workspace/FPGA_project/common_project/common/registers/registers.v" into library work [D:/PA_Workspace/FPGA_project/common_project/common/registers/registers.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/PA_Workspace/FPGA_project/common_project/common/usb_module.v" into library work [D:/PA_Workspace/FPGA_project/common_project/common/usb_module.v:1]
+[Tue Nov 15 08:06:45 2016] Launched synth_35t...
+Run output will be captured here: D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog/aes128_verilog.runs/synth_35t/runme.log
+launch_runs impl_35t
+[Tue Nov 15 08:12:49 2016] Launched impl_35t...
+Run output will be captured here: D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog/aes128_verilog.runs/impl_35t/runme.log
+launch_runs impl_35t -to_step write_bitstream
+[Tue Nov 15 08:17:31 2016] Launched impl_35t...
+Run output will be captured here: D:/PA_Workspace/FPGA_project/common_project/vivado_examples/aes128_verilog/aes128_verilog.runs/impl_35t/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 15 10:20:30 2016...

@@ -1,0 +1,96 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Fri Nov 18 13:11:51 2016
+| Host         : zhouyu running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file cw305_top_control_sets_placed.rpt
+| Design       : cw305_top
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    43 |
+| Unused register locations in slices containing registers |    37 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             327 |           90 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              10 |            2 |
+| Yes          | No                    | No                     |             518 |          158 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             132 |           53 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++---------------------+-------------------------------------------+-------------------+------------------+----------------+
+|     Clock Signal    |               Enable Signal               |  Set/Reset Signal | Slice Load Count | Bel Load Count |
++---------------------+-------------------------------------------+-------------------+------------------+----------------+
+|  usb_wrn_IBUF_BUFG  |                                           |                   |                1 |              1 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[128]_i_1_n_0          |                   |                1 |              1 |
+|  reg_inst/crypt_clk | aes_core/tio_trigger_OBUF                 | reg_inst/state[0] |                1 |              4 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[260]_i_1_n_0          |                   |                2 |              5 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2055]_i_1_n_0         |                   |                4 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4191]_i_1_n_0         |                   |                2 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4199]_i_1_n_0         |                   |                3 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4207]_i_1_n_0         |                   |                1 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2103]_i_1_n_0         |                   |                2 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4215]_i_1_n_0         |                   |                2 |              8 |
+| ~usb_rdn_IBUF_BUFG  |                                           |                   |                5 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4223]_i_1_n_0         |                   |                3 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2063]_i_1_n_0         |                   |                2 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2071]_i_1_n_0         |                   |                1 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2079]_i_1_n_0         |                   |                1 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2087]_i_1_n_0         |                   |                2 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2095]_i_1_n_0         |                   |                3 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2111]_i_1_n_0         |                   |                1 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2119]_i_1_n_0         |                   |                3 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2127]_i_1_n_0         |                   |                3 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2135]_i_1_n_0         |                   |                3 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4183]_i_1_n_0         |                   |                3 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2151]_i_1_n_0         |                   |                3 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2159]_i_1_n_0         |                   |                4 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2167]_i_1_n_0         |                   |                2 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2175]_i_1_n_0         |                   |                2 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[2143]_i_1_n_0         |                   |                1 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4103]_i_1_n_0         |                   |                4 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4111]_i_1_n_0         |                   |                1 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4119]_i_1_n_0         |                   |                2 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4127]_i_1_n_0         |                   |                2 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4135]_i_1_n_0         |                   |                2 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4143]_i_1_n_0         |                   |                2 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4151]_i_1_n_0         |                   |                1 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4159]_i_1_n_0         |                   |                1 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4167]_i_1_n_0         |                   |                2 |              8 |
+|  usb_wrn_IBUF_BUFG  | my_usb/memory_input[4175]_i_1_n_0         |                   |                2 |              8 |
+|  reg_inst/crypt_clk |                                           | reg_inst/state[0] |                2 |             10 |
+|  my_usb/usb_clk_buf |                                           |                   |                8 |             28 |
+|  reg_inst/crypt_clk | aes_core/data_o[127]_i_1_n_0              | reg_inst/state[0] |               52 |            128 |
+|  reg_inst/crypt_clk | aes_core/state[127]_i_1_n_0               |                   |               52 |            128 |
+|  reg_inst/crypt_clk | reg_inst/reg_crypt_cipherout[127]_i_1_n_0 |                   |               33 |            128 |
+|  reg_inst/crypt_clk |                                           |                   |               76 |            290 |
++---------------------+-------------------------------------------+-------------------+------------------+----------------+
+
+

@@ -1,0 +1,10 @@
+[Trace Management]
+tracefile0 = ..\..\Program Files\WinPython-64bit-2.7.6.4\settings\chipwhisperer\projects\tmp\default_data\traces\config_2016.11.14-15.30.32_.cfg
+enabled0 = True
+[ChipWhisperer]
+[[General Settings]]
+Project Name = Untitled
+Program Name = ChipWhisperer
+Project File Version = 1.00
+Project Author = Unknown
+Program Version = V3.2.0
